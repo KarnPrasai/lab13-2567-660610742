@@ -29,7 +29,7 @@ export default function SearchResultPage({params}) {
       <p className="fw-bold fs-4 text-center">Found {filteredMovies.length} result(s)</p>
       {/* Use  "filteredMovies" variable to map-loop rendering MovieRow component */}
       {filteredMovies.map((movie,i) => (
-        <MovieRow key={movie.key} number={i+1} title={movie.title} rating={movie.rating}/>
+        <MovieRow key={movie.id} id={movie.id} title={movie.title} rating={movie.rating} number={i+1}/>
       ))}
     </div>
   );
