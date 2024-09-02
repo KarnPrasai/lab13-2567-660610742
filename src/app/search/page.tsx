@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { ReactHTML, ReactHTMLElement, useState } from "react";
 
 export default function SearchPage() {
   const [searchInput, setSearchInput] = useState("");
@@ -9,11 +9,11 @@ export default function SearchPage() {
   //A hook that helps navigating each route programmatically
   const router = useRouter();
 
-  const searchInputOnChange = (event) => {
+  const searchInputOnChange = (event ) => {
     setSearchInput(event.target.value);
   };
 
-  const searchInputOnKeyUp = (event) => {
+  const searchInputOnKeyUp = (event ) => {
     if (event.key === "Enter") searchBtnOnClick();
   };
 
